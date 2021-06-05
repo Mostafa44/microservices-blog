@@ -16,7 +16,7 @@ const PostCreate = () => {
     }
     return <div >
         <form onSubmit={onSubmitHandler}>
-            <div >
+            <div className="form-group" >
                 <label>Title</label>
                 <input value={title} onChange={onChangeHandler} className="form-control" />
             </div>
