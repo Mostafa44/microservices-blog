@@ -35,6 +35,11 @@ app.post("/posts/:id/comments", async (req, res) => {
     res.status(201).send(comments);
 });
 
+app.post('/events', (req, res) => {
+    const event = req.body;
+    console.log(' Event Recieved ', event.type);
+    res.send({});
+});
 app.listen(4002, () => {
     console.log("llistening on port 4002");
 });
