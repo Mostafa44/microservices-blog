@@ -41,7 +41,7 @@ const handleEvent = (type, data) => {
 }
 app.listen(4003, async () => {
     console.log('Listening on port 4003');
-    const res = await axios.get('http://localhost:4005/events');
+    const res = await axios.get('http://event-bus-srv:4005/events');
     for (let item of res.data) {
         console.log('Processing event ' + item.data);
         handleEvent(item.type, item.data);
