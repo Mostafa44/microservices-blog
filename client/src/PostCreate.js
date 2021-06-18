@@ -11,7 +11,7 @@ const PostCreate = () => {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         console.log("submitted");
-        await axios.post('http://localhost:4000/posts', { title });
+        await axios.post('http://posts.com/posts', { title });
         setTitle('');
     }
     return <div >
